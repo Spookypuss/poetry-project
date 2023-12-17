@@ -25,12 +25,17 @@ h1 {
 
 .poem-container {
     background: white;
+    border-left: 4px solid rgb(150, 47, 246);
     border-radius: 5px;
     display: block;
     height: auto;
     margin: 20px auto;
-    max-width: 80%;
+    max-width: 60%;
     padding: 20px;
+}
+
+.poem-content {
+    padding: 10px 30px;
 }
 
 .prompt {

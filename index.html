@@ -11,21 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI poem generator</title>
 </head>
 <body>
     <h1 class="text-center mt-5 mb-5">Welcome to the AI poem generator</h1>
-    <form>
+    <form id="poem-generator">
         <input type="text" placeholder="Enter the topic" autofocus required autocomplete="off" class="prompt"/>
         <input type="submit" class="submit-button"/>
     </form>
     <div class="poem-container">
-    <div class="poem-content d-flex flex-column text-center">
-        <p>In the autumn night,</p>
-        <p>Breaking into</p>
-        <p>A pleasant chat.</p>
-        <br />
-        <em>Matsuo Basho</em>
+    <div class="poem-content" id="poem">
+        <p>In the autumn night, breaking into a pleasant chat.</p>
     </div>
 </div>
     <footer class="text-center">This project was created by Lyn Rycroft and is <a href="https://github.com/Spookypuss/poetry-project" title="Visit GitHub repository" target="_blank">open source</a>.</footer>
