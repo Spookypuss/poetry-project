@@ -7,6 +7,10 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
 }
 
+em {
+    color:rgb(150, 47, 246);
+}
+
 footer {
     font-family: monospace;
     margin-top: 40px;
@@ -15,12 +19,16 @@ footer {
 form {
     display: flex;
     justify-content: center;
-    margin: 30px auto;
 }
 
 h1 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
+}
+
+.form-container {
+    margin: 30px auto;
+    max-width:35%;
 }
 
 .poem-container {
@@ -36,13 +44,21 @@ h1 {
 
 .poem-content {
     padding: 10px 30px;
+    line-height: 1.5;
 }
 
 .prompt {
     border-radius: 10px;
     margin-right: 15px;
     padding: 8px;
-    width: 150px;
+    width: 350px;
+}
+
+.small-print {
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-top: 5px;
+    opacity: 0.6;
 }
 
 .submit-button {
@@ -56,4 +72,21 @@ h1 {
 .submit-button:hover {
     background: rgb(167, 85, 243);
     cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .poem-container {
+        max-width: 95%;
+    }
+
+    .prompt {
+        border-radius: 10px;
+        margin-right: 15px;
+        padding: 8px;
+        width: 150px;
+    }
+
+    .small-print {
+        margin-top: 2px;
+    }
 }

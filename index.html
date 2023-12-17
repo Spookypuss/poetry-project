@@ -12,17 +12,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> <!--Merriweather Sans font-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!--Axios-->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> <!--Typewriter-->
-    <title>AI poem generator</title>
+    <title>AI haiku poem generator</title>
 </head>
 <body>
-    <h1 class="text-center mt-5 mb-5">Welcome to the AI poem generator</h1>
-    <form id="poem-generator">
-        <input type="text" placeholder="Enter the topic" autofocus required autocomplete="off" class="prompt" id="user-input"/>
-        <input type="submit" class="submit-button"/>
-    </form>
+    <h1 class="text-center mt-5 mb-5">Welcome to the AI haiku generator</h1>
+    <div class="form-container">
+        <form id="poem-generator">
+            <input type="text" placeholder="Enter a topic for your haiku" autofocus required autocomplete="off" class="prompt" id="user-input"/>
+            <input type="submit" class="submit-button"/>
+        </form>
+        <div>
+            <p class="small-print">E.g., summer, flowers, cats, etc.</p>
+        </div>
+    </div>
     <div class="poem-container">
     <div class="poem-content" id="poem">
-        <p>In the autumn night, breaking into a pleasant chat.</p>
+        <p>In the autumn night</p>
+        <p>breaking into</p>
+        <p>a pleasant chat.</p>
+        <br />
+        <em>Matsuo Basho</em>
     </div>
 </div>
     <footer class="text-center">This project was created by Lyn Rycroft and is <a href="https://github.com/Spookypuss/poetry-project" title="Visit GitHub repository" target="_blank">open source</a>.</footer>

@@ -1,12 +1,10 @@
 function showPoem(response) {
-    console.log(response.data);
 
     let generatedPoem = (response.data.answer);
-    generatedPoem = generatedPoem.toLowerCase(); // used to get rid of capitalisation at start of each line
-    generatedPoem = generatedPoem.charAt(0).toUpperCase() + generatedPoem.slice(1);
+    let formattedPoem = generatedPoem.replace(/\n/g, '<br/>'); //Need the /.../g to accept the \, and the '' to inject the html
     
     new Typewriter('#poem', {
-        strings: generatedPoem, // response contains \n for formatting - how to use this in displayed poem?
+        strings: formattedPoem, // response contains \n for formatting - how to use this in displayed poem?
         autoStart: true,
         cursor: "",
         delay: 60,
@@ -25,7 +23,9 @@ function generatePoem(event) {
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${apiPrompt}&context=${context}&key=${apiKey}`;
 
     axios.get(apiUrl).then(showPoem);
-    
+
+    let poemElement = document.querySelector("#poem");
+    poemElement.innerHTML = `Generating a haiku about ${userPrompt.value}for you now...`;
 }
 
 let poemFormElement = document.querySelector("#poem-generator");
