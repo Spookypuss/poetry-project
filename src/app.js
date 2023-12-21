@@ -25,7 +25,7 @@ function generatePoem(event) {
     axios.get(apiUrl).then(showPoem);
 
     let poemElement = document.querySelector("#poem");
-    poemElement.innerHTML = `Generating a haiku about ${userPrompt.value}for you now...`;
+    poemElement.innerHTML = `Generating a haiku about ${userPrompt.value} for you now...`;
 }
 
 let poemFormElement = document.querySelector("#poem-generator");
